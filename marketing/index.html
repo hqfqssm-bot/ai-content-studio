@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Content Studio - AI-Powered Content Generation Platform</title>
+<meta name="description" content="Professional AI content generation SaaS. Generate blog posts, social media content, ads, emails, and SEO content with AI. Complete source code included.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1e293b;background:#fff;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:80px 0 60px;text-align:center}
+.hero h1{font-size:2.8rem;font-weight:800;margin-bottom:16px;line-height:1.2}
+.hero h1 span{color:#818cf8}
+.hero p{font-size:1.15rem;color:#94a3b8;max-width:650px;margin:0 auto 32px}
+.hero-badge{display:inline-block;background:rgba(99,102,241,.2);color:#a5b4fc;border:1px solid rgba(99,102,241,.3);border-radius:20px;padding:4px 16px;font-size:.82rem;margin-bottom:20px}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .15s}
+.btn-primary{background:#6366f1;color:#fff}
+.btn-primary:hover{background:#4f46e5;transform:translateY(-1px)}
+.btn-outline-light{background:transparent;border:2px solid rgba(255,255,255,.2);color:#fff}
+.btn-outline-light:hover{border-color:#6366f1;background:rgba(99,102,241,.1)}
+.hero-stats{display:flex;justify-content:center;gap:40px;margin-top:48px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat-num{font-size:1.8rem;font-weight:700;color:#fff}
+.hero-stat-label{font-size:.82rem;color:#64748b;margin-top:4px}
+.mockup{margin-top:48px;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.3);overflow:hidden;max-width:900px;margin-left:auto;margin-right:auto}
+.mockup img{width:100%;display:block}
+
+/* Sections */
+.section{padding:72px 0}
+.section-gray{background:#f8f9fc}
+.section h2{font-size:2rem;font-weight:700;text-align:center;margin-bottom:12px}
+.section .subtitle{text-align:center;color:#64748b;font-size:1.05rem;max-width:600px;margin:0 auto 48px}
+
+/* Features grid */
+.features{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.feature-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px;transition:all .15s}
+.feature-card:hover{border-color:#6366f1;box-shadow:0 4px 12px rgba(99,102,241,.1);transform:translateY(-2px)}
+.feature-icon{width:44px;height:44px;background:#eef2ff;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem}
+.feature-card h3{font-size:1.05rem;margin-bottom:8px}
+.feature-card p{font-size:.88rem;color:#64748b}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;max-width:650px;margin:0 auto}
+.pricing-card{background:#fff;border:2px solid #e2e8f0;border-radius:12px;padding:32px 28px;text-align:center;position:relative}
+.pricing-card.featured{border-color:#6366f1}
+.pricing-card.featured:before{content:"Most Popular";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#6366f1;color:#fff;font-size:.72rem;font-weight:600;padding:3px 16px;border-radius:20px}
+.pricing-card h3{font-size:1.1rem;margin-bottom:4px}
+.pricing-card .price{font-size:2.5rem;font-weight:800;margin:12px 0}
+.pricing-card .price span{font-size:1rem;font-weight:400;color:#64748b}
+.pricing-card ul{list-style:none;text-align:left;margin:20px 0}
+.pricing-card ul li{padding:6px 0;font-size:.88rem;display:flex;align-items:center;gap:8px;color:#64748b}
+.pricing-card ul li:before{content:"\2713";color:#10b981;font-weight:700}
+.pricing-card .btn{width:100%;justify-content:center}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;text-align:center;padding:64px 0}
+.cta h2{font-size:2rem;margin-bottom:12px}
+.cta p{color:#94a3b8;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+
+/* Footer */
+.footer{background:#0f172a;color:#64748b;padding:24px 0;text-align:center;font-size:.85rem;border-top:1px solid rgba(255,255,255,.05)}
+
+@media(max-width:768px){
+  .hero h1{font-size:2rem}
+  .hero-stats{gap:20px}
+  .features{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Complete SaaS Source Code</div>
+    <h1>AI Content Studio</h1>
+    <p>A production-ready AI content generation platform. JWT auth, Stripe payments, credit system, API keys, and Docker deploy — all included.</p>
+    <div class="hero-btns">
+      <a href="#features" class="btn btn-primary">View Features</a>
+      <a href="#pricing" class="btn btn-outline-light">See Pricing</a>
+      <a href="https://gumroad.com" class="btn btn-outline-light" target="_blank">Buy Source Code</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">6</div><div class="hero-stat-label">Content Types</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">3</div><div class="hero-stat-label">Deployment Options</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">10+</div><div class="hero-stat-label">API Endpoints</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">$0</div><div class="hero-stat-label">Start Free</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="container">
+    <h2>Everything You Need to Launch</h2>
+    <p class="subtitle">A complete, production-ready SaaS platform with all the features required to start charging users today.</p>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🔐</div>
+        <h3>JWT Authentication</h3>
+        <p>Secure register/login with bcrypt password hashing. Token-based auth across all API endpoints.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>AI Content Generation</h3>
+        <p>Blog posts, social media, ads, emails, SEO content, and custom prompts. Powered by OpenAI API.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💳</div>
+        <h3>Stripe Payments</h3>
+        <p>Full Stripe Checkout integration. Pro subscription at $19.99/month with automated credit top-up.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Credit System</h3>
+        <p>Free tier (5 credits) + Pro tier (100 credits/month). Pay-per-generation model ready to go.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔑</div>
+        <h3>API Key Management</h3>
+        <p>Generate and manage API keys for external integrations. Pro users get programmatic access.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3>Docker Deploy</h3>
+        <p>One-command deployment with Docker Compose. Includes PostgreSQL, nginx, and auto SSL support.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile Responsive</h3>
+        <p>Modern SaaS UI that works on all devices. Dashboard, generator, history, settings views.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Demo Mode</h3>
+        <p>Works without an API key for testing. Generate demo content to showcase the platform.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Content History</h3>
+        <p>Browse, search, and reuse past generations. Full history with content type filtering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Screenshots -->
+<section class="section section-gray">
+  <div class="container">
+    <h2>See It In Action</h2>
+    <p class="subtitle">Professional SaaS interface — clean, modern, and ready for your users.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:0 auto">
+      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;text-align:center">
+        <div style="background:#f1f5f9;border-radius:8px;height:180px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:.85rem;margin-bottom:12px">
+          <div style="text-align:left;width:80%">
+            <div style="display:flex;gap:8px;margin-bottom:8px"><div style="width:33%;height:8px;background:#6366f1;border-radius:4px"></div><div style="width:20%;height:8px;background:#e2e8f0;border-radius:4px"></div></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+              <div style="height:60px;background:#e2e8f0;border-radius:6px"></div>
+              <div style="height:60px;background:#e2e8f0;border-radius:6px"></div>
+              <div style="height:60px;background:#e2e8f0;border-radius:6px"></div>
+            </div>
+          </div>
+        </div>
+        <div style="font-weight:600;font-size:.9rem">Dashboard View</div>
+        <div style="font-size:.78rem;color:#64748b">Credit overview and quick actions</div>
+      </div>
+      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;text-align:center">
+        <div style="background:#f1f5f9;border-radius:8px;height:180px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:.85rem">
+          <div style="text-align:left;width:80%">
+            <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px">
+              <div style="padding:4px 12px;background:#6366f1;color:#fff;border-radius:4px;font-size:.7rem">Blog</div>
+              <div style="padding:4px 12px;background:#e2e8f0;border-radius:4px;font-size:.7rem">Social</div>
+              <div style="padding:4px 12px;background:#e2e8f0;border-radius:4px;font-size:.7rem">Ad</div>
+              <div style="padding:4px 12px;background:#e2e8f0;border-radius:4px;font-size:.7rem">Email</div>
+            </div>
+            <div style="height:40px;background:#e2e8f0;border-radius:6px;margin-bottom:8px"></div>
+            <div style="height:60px;background:#e2e8f0;border-radius:6px"></div>
+          </div>
+        </div>
+        <div style="font-weight:600;font-size:.9rem">Content Generator</div>
+        <div style="font-size:.78rem;color:#64748b">AI-powered content creation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section class="section">
+  <div class="container">
+    <h2>Tech Stack</h2>
+    <p class="subtitle">Built with modern, proven technologies. Easy to customize and extend.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:600px;margin:0 auto">
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">FastAPI</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">Python 3.10+</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">SQLAlchemy</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">JWT Auth</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">Stripe</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">OpenAI API</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">Docker</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">nginx</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">PostgreSQL</span>
+      <span style="background:#eef2ff;color:#4338ca;padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:500">Vanilla JS</span>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section section-gray" id="pricing">
+  <div class="container">
+    <h2>Buy the Source Code</h2>
+    <p class="subtitle">One-time purchase. Full source code. Use it to launch your own SaaS or resell to clients.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Basic License</h3>
+        <div class="price">$49<span></span></div>
+        <ul>
+          <li>Full source code</li>
+          <li>Single end product</li>
+          <li>Standard documentation</li>
+          <li>Email support</li>
+        </ul>
+        <a href="https://gumroad.com" class="btn btn-outline-light" style="border-color:#6366f1;color:#6366f1">Buy on Gumroad</a>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Extended License</h3>
+        <div class="price">$149<span></span></div>
+        <ul>
+          <li>Full source code</li>
+          <li>Multiple end products</li>
+          <li>Priority support</li>
+          <li>Custom deployment help</li>
+          <li>1 hour video call</li>
+        </ul>
+        <a href="https://gumroad.com" class="btn btn-primary">Buy on Gumroad</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Launch Your AI SaaS?</h2>
+    <p>Get the complete source code, deploy it in minutes, and start charging users today.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="#features" class="btn btn-primary">View Features</a>
+      <a href="#pricing" class="btn btn-outline-light">See Pricing</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    AI Content Studio &mdash; Built with FastAPI &middot; Open source under MIT license
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,sans-serif;background:#f8f9fc;display:flex;min-height:100vh}
+.sidebar{width:240px;background:#0f172a;color:#94a3b8;padding:20px 12px;display:flex;flex-direction:column}
+.sidebar .brand{font-size:15px;font-weight:700;color:#fff;padding:10px 14px;background:#6366f1;border-radius:8px;margin-bottom:24px;text-align:center}
+.sidebar .nav-item{padding:10px 14px;border-radius:6px;margin-bottom:2px;font-size:14px}
+.sidebar .nav-item.active{background:rgba(99,102,241,.2);color:#fff}
+.main{flex:1}
+.header{background:#fff;height:60px;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+.header h2{font-size:18px;font-weight:600}
+.credits-badge{background:#eef2ff;color:#6366f1;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600}
+.content{padding:28px 32px;max-width:900px}
+.type-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:20px}
+.type-card{border:2px solid #e2e8f0;border-radius:8px;padding:16px 12px;text-align:center;cursor:pointer;background:#fff}
+.type-card.active{border-color:#6366f1;background:#eef2ff;color:#6366f1}
+.type-card .icon{font-size:20px;margin-bottom:6px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:24px;margin-bottom:20px}
+.form-label{font-size:13px;font-weight:600;margin-bottom:6px;display:block}
+textarea{width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-size:14px;min-height:100px;font-family:inherit;margin-bottom:16px}
+select{width:100%;padding:10px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:14px;background:#fff}
+button{width:100%;padding:14px;background:#6366f1;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer}
+.result{width:100%;min-height:80px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:8px;margin-top:16px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:13px}
+</style></head><body>
+<div class="sidebar">
+<div class="brand">AI Content Studio</div>
+<div class="nav-item">&#9673; Dashboard</div>
+<div class="nav-item active">&#10010; Generate Content</div>
+<div class="nav-item">&#9719; History</div>
+<div class="nav-item">$ Pricing</div>
+<div class="nav-item">&#9881; Settings</div>
+</div>
+<div class="main">
+<div class="header"><h2>Generate Content</h2><div class="credits-badge">&#10022; 5 credits</div></div>
+<div class="content">
+<div style="font-size:16px;font-weight:700;margin-bottom:4px">Generate Content</div>
+<div style="font-size:13px;color:#64748b;margin-bottom:20px">Select content type, enter your prompt, and let AI create it for you.</div>
+<div class="card">
+<div style="font-weight:600;font-size:14px;margin-bottom:12px">1. Choose Content Type</div>
+<div class="type-grid">
+<div class="type-card active"><div class="icon">&#128196;</div>Blog Post</div>
+<div class="type-card"><div class="icon">&#128241;</div>Social Media</div>
+<div class="type-card"><div class="icon">&#128200;</div>Advertisement</div>
+<div class="type-card"><div class="icon">&#9993;</div>Email Marketing</div>
+<div class="type-card"><div class="icon">&#128269;</div>SEO Content</div>
+<div class="type-card"><div class="icon">&#9998;</div>Custom</div>
+</div>
+<label class="form-label">2. Describe what you want to create</label>
+<textarea placeholder="Write a blog post about the future of AI..." style="color:#94a3b8">Write a blog post about AI in healthcare</textarea>
+<div class="result">Your generated content will appear here</div>
+</div></div></div></body></html>
