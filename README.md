@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://hqfqssm-bot.github.io/ai-content-studio">▶  Live Demo</a>
   &nbsp;|&nbsp;
-  <a href="https://gumroad.com">🛒  Buy Full Source ($49)</a>
+  <a href="https://hqfqssm.gumroad.com/l/zofcdb">🛒  Buy Full Source ($49)</a>
   &nbsp;|&nbsp;
   <a href="https://github.com/hqfqssm-bot/ai-content-studio/issues">💬  Feedback</a>
 </p>
@@ -27,11 +27,9 @@
 
 ## 🛒 Purchase
 
-The full source code is available on Gumroad:
+➡️  **https://hqfqssm.gumroad.com/l/zofcdb**
 
-**Price: $49** — One-time purchase, lifetime updates, commercial use.
-
-[Buy on Gumroad →](https://gumroad.com)
+Price: $49 — One-time purchase, lifetime updates, commercial use.
 
 What's included:
 - Complete backend (FastAPI + SQLAlchemy)
@@ -40,18 +38,6 @@ What's included:
 - Docker + nginx production config
 - Installation and deployment documentation
 - Email support
-
-## 🚀 Quick Start (demo)
-
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-```
-
-Open http://localhost:8000
-
-> ⚠️  Requires the full source code package. Download from Gumroad.
 
 ## Tech Stack
 
